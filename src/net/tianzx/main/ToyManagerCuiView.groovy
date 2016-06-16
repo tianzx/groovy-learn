@@ -3,7 +3,7 @@ package net.tianzx.main
 
 def printMenu(){
     print""
-    println "Welcome to Toy Manager View"
+    println "\t\tWelcome to Toy Manager View"
     println '''
         0.Exit System
         1.Add Toy
@@ -14,21 +14,22 @@ def printMenu(){
         6.Delete All Toys
                 Please Choice:
         '''
-    new InputStreamReader(new InputStreamReader(System.in)).readLine()
+    new BufferedReader(new InputStreamReader(System.in)).readLine()
 }
-def chioce = printMenu()
-while (chioce!=0) {
-    if (chioce=='1') {
+def choice = printMenu()
+while (choice!=0) {
+    if (choice=='1') {
         println 'Add Toy'
-    }else if(chioce=='2'){
+    }else if(choice=='2'){
         println 'Display All Toys'
-    }else if (chioce=='3'){
+    }else if (choice=='3'){
         println 'Update Toy'
-    }else if(chioce=='4'){
+    }else if(choice=='4'){
         println 'Delete Toy'
-    } else if(chioce=='5'){
+    } else if(choice=='5'){
         println 'Display Toy'
-    } else if(chioce=='6'){
+    } else if(choice=='6'){
         println 'Delete All Toys'
     }
+    choice = printMenu()
 }
